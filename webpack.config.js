@@ -4,14 +4,15 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const devConfig = {
     context: path.resolve(__dirname, 'src'),
     entry: {
-        app: './app/app.js',
+        app: './app/index.js',
         vendor: ['angular','angular-route']  
     },
-    devtool: 'inline-source-map',
+    devtool: 'eval',
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: '[name].bundle.js'
@@ -22,7 +23,14 @@ const devConfig = {
 				test: /\.js$/,
 				exclude: /node_modules/,
 				loader: ['babel-loader']
-			}
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader"
+                ]
+            }
         ]
     },
     optimization: {
@@ -55,6 +63,10 @@ const devConfig = {
         new HtmlWebpackPlugin({
 			template: './index.html'
         }), //use index.html and insert built resources into it
+        new MiniCssExtractPlugin({
+            filename: "[name].css",
+            chunkFilename: "[id].css"
+        }),
         new CleanWebpackPlugin('build'),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()

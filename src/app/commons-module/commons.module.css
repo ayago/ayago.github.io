@@ -1,0 +1,44 @@
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p, th, td, li, dd, dt, ul, ol, blockquote, q, acronym, abbr, a, input, select, textarea {
+    margin: 0;
+    padding: 0;
+    font: normal normal normal 1em/1.25 Arial, Helvetica, sans-serif;
+}
+
+body,
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertically-centered {
+    display: flex;
+    justify-content: column;
+    align-items: center;
+}
+
+.rx-vc {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.lx-vc {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+input.ng-invalid {
+    background-color: palevioletred;
+}
+input.ng-valid {
+    background-color: lightgreen;
+}
