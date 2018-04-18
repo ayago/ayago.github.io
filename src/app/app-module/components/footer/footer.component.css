@@ -1,0 +1,18 @@
+.footer-component{
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+}
+
+.footer-component > div{
+    width: 50%;
+    height: 100%;
+}
+
+.footer-search-label {
+    padding-left: 15px;
+}
+
+.footer-search-button {
+    padding-right: 25px;
+}

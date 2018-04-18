@@ -1,0 +1,19 @@
+<div class="container-component">
+    <div class="container-header">
+        <app-header></app-header>
+    </div>
+    <div class="container-body">
+        <div class="body-text-field">
+            <text-field on-update="$ctrl.onTextFieldChange(isValid, value)"></text-field>
+        </div>
+        <div class="body-number-field">
+            <number-field on-update="$ctrl.onNumberFieldChange(isValid, value)" ></number-field>
+        </div>
+        <div class="body-intercept-list">
+            <intercept-list search-handler-setter="$ctrl.setSearchHandler(handler)"></intercept-list>
+        </div>
+    </div>
+    <div class="container-footer">
+        <app-footer on-search-click="$ctrl.onSearch()"></app-footer>
+    </div>
+</div>
