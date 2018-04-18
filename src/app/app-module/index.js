@@ -6,6 +6,7 @@ import FooterComponent from './components/footer/footer.component';
 import SearchButtonComponent from './components/search-button/search-button.component';
 import TextFieldComponent from './components/text-field/text-field.component';
 import NumberFieldComponent from './components/number-field/number-field.component';
+import InterceptListComponent from './components/intercept-list/intercept-list.component';
 
 export default angular.module('app-module',[])
     .component('appContainer', ContainerComponent)
@@ -13,4 +14,5 @@ export default angular.module('app-module',[])
     .component('appFooter', FooterComponent)
     .component('appSearchButton', SearchButtonComponent)
     .component('textField', TextFieldComponent)
-    .component('numberField', NumberFieldComponent);
+    .component('numberField', NumberFieldComponent)
+    .component('interceptList', InterceptListComponent);

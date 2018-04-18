@@ -1,2 +1,3 @@
-<input class="number-field-component" name="number-field" type="number"
-    data-ng-model="myInput" min-number required placeholder="Number field"/>
+<input class="number-field-component" name="numberField" type="number"
+    data-ng-model="myInput" is-number data-ng-form="numberFieldForm"
+    data-ng-change="$ctrl.change()" required placeholder="Number field"/>

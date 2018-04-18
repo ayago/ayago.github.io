@@ -1,2 +1,4 @@
-<input class="text-field-component" name="text-field" type="text"
-    data-ng-model="myInput" data-ng-maxlength="50" required/>
+<input class="text-field-component" name="textField" type="text"
+    data-ng-model="$ctrl.myInput" data-ng-maxlength="50" 
+    data-ng-change="$ctrl.change()" data-ng-form="textFieldForm"
+    required placeholder="Text field"/>

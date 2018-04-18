@@ -25,3 +25,15 @@
     width: 100%;
     height: 400px;
 }
+
+.body-text-field {
+    height: 7%;
+}
+
+.body-number-field {
+    height: 7%;
+}
+
+.body-intercept-list {
+    height: 86%;
+}

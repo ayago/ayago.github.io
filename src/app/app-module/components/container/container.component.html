@@ -3,14 +3,17 @@
         <app-header></app-header>
     </div>
     <div class="container-body">
-        <div>
-            <text-field></text-field>
+        <div class="body-text-field">
+            <text-field on-update="$ctrl.onTextFieldChange(isValid)"></text-field>
         </div>
-        <div>
-            <number-field></number-field>
+        <div class="body-number-field">
+            <number-field on-update="$ctrl.onNumberFieldChange(isValid)" ></number-field>
+        </div>
+        <div class="body-intercept-list">
+            <intercept-list></intercept-list>
         </div>
     </div>
     <div class="container-footer">
-        <app-footer></app-footer>
+        <app-footer on-search-click="$ctrl.onSearch()"></app-footer>
     </div>
 </div>
