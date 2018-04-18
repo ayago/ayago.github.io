@@ -5,7 +5,7 @@ class Controller {
     constructor($scope){
         this.myInput;
         this.change = function(){
-            this.onUpdate({isValid: $scope.textField.$valid})
+            this.onUpdate({isValid: $scope.textField.$valid, value: this.myInput})
         }
     }
 
